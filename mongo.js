@@ -3,12 +3,11 @@ const mongoose = require('mongoose')
 if (process.argv.length < 3) {
   console.log('provide name and number please!')
   process.exit(1)
-} 
+}
 
 const password = process.argv[2]
 
-const url = 
-  `mongodb+srv://fullstackdata:${password}@cluster0.tpglgnu.mongodb.net/?retryWrites=true&w=majority`
+const url = `mongodb+srv://fullstackdata:${password}@cluster0.tpglgnu.mongodb.net/?retryWrites=true&w=majority`
 
 mongoose.set('strictQuery', false)
 mongoose.connect(url)
